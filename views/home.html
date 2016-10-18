@@ -20,9 +20,14 @@
 
 <body>
     
-    <div class="container btn-div">
+    <div id="logregbuttons" class="container btn-div" >
         <a class="btn btn-own" data-toggle="modal" data-target="#loginModel">Login</a>
         <a class="btn btn-own" data-toggle="modal" data-target="#registerModel">Register</a>
+    </div>
+    <div id="welcomeMsgdiv" class="container btn-div" style="display:none">
+        <span id="welcomeMsg">Welcome, Eswar</span>
+        <button id="logout" type="button" class="btn btn-own" >Logout</button>
+        
     </div>
     
     <div class="container box-color-gradient">
@@ -48,6 +53,32 @@
                 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="icon-prev" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
                 <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="icon-next" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
             </div>
+        </div>
+    </div>
+    
+    <!-- Personal Data -->
+    <div>
+        <div id="personal" class="row" style="display:none">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">First Name</div>
+                <div id="fnamediv" class="col-sm-6"></div>
+            
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">Last Name</div>
+                <div id="lnamediv" class="col-sm-6"></div>
+            
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">Email</div>
+                <div id="emaildiv" class="col-sm-6"></div>
+            
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">Start Date</div>
+                <div id="startdatediv" class="col-sm-6"></div>
+            
+            
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">Mobile</div>
+                <div id="mobdiv" class="col-sm-6"></div>
         </div>
     </div>
     
@@ -146,19 +177,19 @@
         
 <!-- Register Model-->
                                                                           
-<div class="modal fade" id="registerModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal fade" id="registerModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
     <div class="modal-dialog">
         <div class="loginmodal-container">
             <h1>Register</h1>
             <br>
-            <form>
-                <input type="text" name="fname" placeholder="First Name">
-                <input type="text" name="lname" placeholder="Last Name">
-                <input type="email" name="email" placeholder="Email id/Username">
-                <input type="password" name="password" placeholder="Password">
-                <input type="password" name="repassword" placeholder="Re-type Password">
-                <input type="number" name="mob" placeholder="Mobile Number">
-                <input type="submit" name="Register" class="login loginmodal-submit" value="Register"> </form>
+            <form id="formregister" action="javascript:register();" >
+                <input id="fname" type="text" name="fname" placeholder="First Name" required>
+                <input id="lname" type="text" name="lname" placeholder="Last Name" required>
+                <input id="email" type="email" name="email" placeholder="Email id/Username" required>
+                <input id="password" type="password" name="password" placeholder="Password" required>
+                <input id="repassword" type="password" name="repassword" placeholder="Re-type Password" required>
+                <input id="mob" type="number" name="mob" placeholder="Mobile Number" required>
+                <input id="subbtn" type="submit" name="Register" class="login loginmodal-submit" value="Register"> </form>
         </div>
     </div>
 </div>

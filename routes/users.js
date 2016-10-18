@@ -23,18 +23,18 @@ router.post('/login', function(req, res, next) {
 });
 
 router.post('/register', function(req, res, next) {
+    
+    
   res.setHeader('content-type', 'application/json');
   console.log(req.body.fname);
-  var output = req.body;
-   var json = JSON.stringify({
-       output,
-       status: "success"
-    });
-    
  var userService = new UserService(req.body.fname, req.body.lname, req.body.email, req.body.mob, req.body.password);
 
-userService.ping();
+ var output = userService.writeToFile();
     
+ var json = JSON.stringify({
+       output,
+       status: "success"
+ });
   res.end(json); 
  
 });

@@ -219,3 +219,8 @@ a {
 .close {
     opacity: 1;
 }
+
+#welcomeMsg {
+    color: green;
+    font-weight: bold;
+}
