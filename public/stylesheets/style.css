@@ -224,3 +224,7 @@ a {
     color: green;
     font-weight: bold;
 }
+#failure {
+    color: red;
+    font-weight: bold;
+}
