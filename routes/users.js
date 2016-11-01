@@ -57,4 +57,23 @@ router.post('/register', function(req, res, next) {
  
 });
 
+router.get('/allusers', function(req, res) {
+   res.setHeader('content-type', 'application/json');
+    try{
+     //   var output = {result:'output'};
+     let userService = new UserService();
+     var output = userService.getAllUsers();
+     console.log(output);
+     var json = JSON.stringify({
+       output,
+       status: "success"
+     });
+    res.end(json);
+    }
+    catch(e) {
+        res.end("error occured.")
+    }
+  
+});
+
 module.exports = router;

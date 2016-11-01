@@ -8,7 +8,10 @@ $(document).ready(function() {
     
 });
 
-
+function openRegister() {
+    $("#loginModel").modal("hide");
+     $("#registerModel").modal("show");
+}
 
 function register() {
      $.ajax({

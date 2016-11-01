@@ -40,8 +40,7 @@ class UserService {
         try {
            var content = fs.readFileSync("./database/data.json","utf-8");
            content = content + "]"
-           console.log(content);
-           let db = JSON.parse(content);
+            let db = JSON.parse(content);
             for(var item of db) {
                  if(item.email === this.email && item.password === this.password) {
                      console.log(item.email);
@@ -54,6 +53,20 @@ class UserService {
         }
         
         return null;
+    }
+    
+    getAllUsers() {
+        console.log(`ping reached get all users method.`);
+        let db;
+        try{
+        var content = fs.readFileSync("./database/data.json","utf-8");
+        content = content + "]";
+        db = JSON.parse(content);
+        }
+        catch(e) {
+            console.log(e);
+        }
+        return db;
     }
     
     

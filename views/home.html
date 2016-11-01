@@ -27,7 +27,7 @@
     <div id="welcomeMsgdiv" class="container btn-div" style="display:none">
         <span id="welcomeMsg">Welcome, Eswar</span>
         <button id="logout" type="button" class="btn btn-own" >Logout</button>
-        
+        <button id="settings" type="button" class="btn btn-own">Settings</button>
     </div>
     
     <div class="container box-color-gradient">
@@ -170,7 +170,7 @@
                 <input id="user" type="email" name="user" placeholder="Username" required>
                 <input id="loginpwd" type="password" name="pass" placeholder="Password" required>
                 <input type="submit" name="login" class="login loginmodal-submit" value="Login"> </form>
-            <div class="login-help"> <a href="#">Register</a> - <a href="#">Forgot Password</a> </div>
+            <div class="login-help"> <a href="#" onclick="openRegister();">Register</a> - <a href="#">Forgot Password</a> </div>
             <div id="failure"></div>
         </div>
     </div>
